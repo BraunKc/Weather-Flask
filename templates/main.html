@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=near_me" />
+{% endblock %}
+
+{% block body %}
+        <div class="container">
+            <form method="post">
+                <div>
+                    <input class="input-text" name="city" type="text" placeholder="Город">
+                    <button class="material-symbols-outlined" type="button" id="auto-detect-btn">near_me</button>
+                </div>
+                <input class="input-submit" type="submit" value="К погоде">
+            </form>
+        </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
